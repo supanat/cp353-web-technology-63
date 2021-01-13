@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Apple Music</title>
+    </head>
+    <body>
+        <h1>Apple Music</h1>
+        {% for item in items %}
+            <b>{{item.title}}</b><br />
+            <i>{{item.description}}</i><br />
+            <a href={{item.link}}>{{item.link}}</a>
+            <hr />
+        {% endfor %}
+    </body>
+</html>
+
