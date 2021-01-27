@@ -8,7 +8,7 @@ import json
 app = Flask(__name__)
 
 OPEN_WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather?q={0}&units=metric&APPID={1}"
-OPEN_WEATHER_KEY = '59f97de71b0b9c95d51307f7ab7c95b8'
+OPEN_WEATHER_KEY = 'your-api-key'
 
 @app.route("/")
 def home():
