@@ -8,5 +8,6 @@ def hello_world():
     return 'Hello World!'
 
 
-#app.env="development"
-#app.run(debug=True)
+
+app.env="development"
+app.run(debug=True)

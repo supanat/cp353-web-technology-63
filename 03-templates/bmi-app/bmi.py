@@ -9,7 +9,7 @@ def bmi_calc():
         weight = float(request.form.get('weight'))
         height = float(request.form.get('height'))
         bmi = calc_bmi(weight, height)
-    return render_template("bmi.html",
+    return render_template("profile.html",
 	                        bmi=bmi)
 
 def calc_bmi(weight, height):
