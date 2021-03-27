@@ -9,6 +9,17 @@ def get_tasks():
     return jsonify({'todos': tasks})
 
 
+@app.route('/todo/api/v1.0/tasks', methods=['POST'])
+def create_task():
+    task = {
+        'id': len(tasks) + 1,
+        'name': request.json['name'],
+    }
+    tasks.append(task)
+    return jsonify({'task': task}), 201
+
+
+
 @app.route('/todo/api/v1.0/tasks/<int:task_id>', methods=['GET'])
 def get_task(task_id):
 
@@ -19,12 +30,5 @@ def get_task(task_id):
     return jsonify({'task': task})
 
 
-@app.route('/todo/api/v1.0/tasks', methods=['POST'])
-def create_task():
-    task = {
-        'id': len(tasks) + 1,
-        'name': request.json['name'],
-    }
-    tasks.append(task)
-    return jsonify({'task': task}), 201
+
 
